@@ -18,10 +18,10 @@ The system consists of the following components:
 
 ### Backend
 - Java 17
-- Spring Boot 2.7.0
+- Spring Boot 3.1.5
 - Spring Security
 - Spring Data JPA
-- MySQL
+- PostgreSQL
 - JWT Authentication
 
 ### Frontend
@@ -52,18 +52,43 @@ The application uses client-side routing to provide a seamless user experience w
 ## Setup and Running
 
 ### Prerequisites
-- Java 17+
+- Java 17
 - Maven
-- MySQL
+- PostgreSQL 15
 - Web Browser (Chrome, Firefox, Safari, etc.)
 
 ### Backend Setup
 
-1. **Database Setup**:
-   - Create two MySQL databases: `auth_db` and `task_db`
-   - Update the database configurations in each service's `application.properties` file if needed
+1. **PostgreSQL Installation**:
+   ```bash
+   # macOS (using Homebrew)
+   brew install postgresql@15
+   
+   # Start PostgreSQL service
+   brew services start postgresql@15
+   
+   # Add PostgreSQL to your PATH (if not already done)
+   echo 'export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
 
-2. **Auth Service**:
+2. **Database Setup**:
+   ```bash
+   # Create postgres superuser with password (if not exists)
+   psql postgres -c "CREATE USER postgres WITH SUPERUSER PASSWORD 'Your Password';"
+   
+   # Create required databases
+   psql postgres -c "CREATE DATABASE auth_db;"
+   psql postgres -c "CREATE DATABASE task_db;"
+   
+   # Grant privileges
+   psql postgres -c "GRANT ALL PRIVILEGES ON DATABASE auth_db TO postgres;"
+   psql postgres -c "GRANT ALL PRIVILEGES ON DATABASE task_db TO postgres;"
+   ```
+
+   Note: Update the database credentials in each service's `application.properties` file if needed.
+
+3. **Auth Service**:
    ```bash
    cd backend/auth-service
    mvn clean install
@@ -71,7 +96,7 @@ The application uses client-side routing to provide a seamless user experience w
    ```
    Auth service will run on port 8081
 
-3. **Task Service**:
+4. **Task Service**:
    ```bash
    cd backend/task-service
    mvn clean install
@@ -146,6 +171,15 @@ The application uses JWT for authentication. Each request to the task service re
 4. **Profile**:
    - View your account information
 
+## PostgreSQL Migration Notes
+
+If you're migrating from MySQL to PostgreSQL, be aware of these differences:
+
+1. **Case Sensitivity**: PostgreSQL is case-sensitive by default for identifiers, while MySQL is case-insensitive.
+2. **Transaction Behavior**: PostgreSQL and MySQL have different default transaction isolation levels.
+3. **Data Types**: Some data types are handled differently between the two databases.
+4. **SQL Syntax**: Some SQL functions and syntax differ between PostgreSQL and MySQL.
+
 ## Future Enhancements
 
 - Email notifications for task deadlines
@@ -174,4 +208,5 @@ If you can't connect to the backend services:
 
 1. Ensure both microservices are running (auth-service on port 8081 and task-service on port 8082)
 2. Check for CORS issues - the backend is configured to allow cross-origin requests
-3. Verify that the API URLs in the frontend code match your backend configuration 
+3. Verify that the API URLs in the frontend code match your backend configuration
+4. For PostgreSQL issues, ensure the service is running: `brew services list | grep postgres` 
