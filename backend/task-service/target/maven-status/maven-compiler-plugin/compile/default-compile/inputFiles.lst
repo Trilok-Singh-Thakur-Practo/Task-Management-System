@@ -1,0 +1,11 @@
+/Users/triloksingh/task-management-system/backend/task-service/src/main/java/com/taskmanagement/tms/task/model/TaskStatus.java
+/Users/triloksingh/task-management-system/backend/task-service/src/main/java/com/taskmanagement/tms/task/model/TaskPriority.java
+/Users/triloksingh/task-management-system/backend/task-service/src/main/java/com/taskmanagement/tms/task/dto/TaskSummary.java
+/Users/triloksingh/task-management-system/backend/task-service/src/main/java/com/taskmanagement/tms/task/dto/TaskResponse.java
+/Users/triloksingh/task-management-system/backend/task-service/src/main/java/com/taskmanagement/tms/task/TaskServiceApplication.java
+/Users/triloksingh/task-management-system/backend/task-service/src/main/java/com/taskmanagement/tms/task/controller/DashboardController.java
+/Users/triloksingh/task-management-system/backend/task-service/src/main/java/com/taskmanagement/tms/task/repository/TaskRepository.java
+/Users/triloksingh/task-management-system/backend/task-service/src/main/java/com/taskmanagement/tms/task/security/jwt/JwtUtils.java
+/Users/triloksingh/task-management-system/backend/task-service/src/main/java/com/taskmanagement/tms/task/dto/TaskRequest.java
+/Users/triloksingh/task-management-system/backend/task-service/src/main/java/com/taskmanagement/tms/task/model/Task.java
+/Users/triloksingh/task-management-system/backend/task-service/src/main/java/com/taskmanagement/tms/task/controller/TaskController.java

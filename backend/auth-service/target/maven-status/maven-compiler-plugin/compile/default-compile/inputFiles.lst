@@ -1,0 +1,15 @@
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/security/jwt/AuthTokenFilter.java
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/dto/JwtResponse.java
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/dto/SignupRequest.java
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/dto/MessageResponse.java
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/security/WebSecurityConfig.java
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/AuthServiceApplication.java
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/dto/LoginRequest.java
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/security/jwt/JwtUtils.java
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/security/jwt/AuthEntryPointJwt.java
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/security/services/UserDetailsServiceImpl.java
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/controller/AuthController.java
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/repository/UserRepository.java
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/model/User.java
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/controller/TestController.java
+/Users/triloksingh/task-management-system/backend/auth-service/src/main/java/com/taskmanagement/tms/auth/security/services/UserDetailsImpl.java
